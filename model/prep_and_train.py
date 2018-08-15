@@ -151,7 +151,7 @@ def stratified_split_ind(y, test_size, n_bins, rand_state=0):
                             random_state=rand_state)
 
 
-def split_train_test_val(y, test_size=0.2, val_size=0.3, n_bins=20):
+def split_train_val_test(y, test_size=0.2, val_size=0.3, n_bins=50):
     """Splits given data into train, test, and validation sets, each with proportions given by the parameters.
     Note that validation set is split from the train set and thus has an overall proportion of test_size * val_size"""
     train_and_val_ind, test_ind = stratified_split_ind(y, test_size, n_bins)
